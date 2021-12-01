@@ -1,0 +1,23 @@
+{% extends "base.html"%}
+{% load static %}
+
+{% block content %}
+<p>kajsdfha yayayaya</p>
+<div class='container'>
+    <div class='row'>
+        <div class='col-12'> 
+            {% for review in movies %}
+                <div class="card mt-3">
+                    <div class="card-body">
+                    <h5 class="card-title">{{ review.movie.title }} {{ review.author }}
+                    </h5>
+                    <p class="card-text">{{ review.short_description }}</p>
+                    <a href="#" class="btn btn-primary">가자!</a>
+                    </div> 
+                </div>
+            {% endfor %}
+         </div>
+    </div>
+</div>
+
+{% endblock %}

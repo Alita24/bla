@@ -1,0 +1,147 @@
+{% load static %}
+<img src="{% static 'photos/ballet.jpg' %}" alt="My image">
+
+<ul class="nav nav-pills" id="reviewsPills" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active" id="pills-recommended-tab" data-toggle="pill"
+            href="#pills-recommended" role="tab" aria-controls="pills-recommended"
+            aria-selected="true">Polecane</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link mx-3" id="pills-ratings-tab" data-toggle="pill" href="#pills-ratings"
+            role="tab" aria-controls="pills-ratings" aria-selected="false">Najwyżej oceniane</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link" id="pills-favourite-tab" data-toggle="pill" href="#pills-favourite"
+            role="tab" aria-controls="pills-favourite" aria-selected="false">Ulubione</a>
+    </li>
+</ul>
+
+<!-- Tabpanel -->
+<div class="tab-content" id="reviewsPillsContent">
+    <div class="tab-pane fade show active" id="pills-recommended" role="tabpanel" aria-labelledby="pills-recommended-tab">
+        <div class="row">
+            <div class="col-sm-6">
+                <a href="#" class="card text-dark">
+                    <img src="{% static 'photos/kim.jpg' %}" class="card-img-top"
+                        alt="Recommended movie poster">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Tytuł filmu polecanego 1</h5>
+                        <p class="card-text">
+                            once again kim yuna didn't disappoint us. 
+                            beautifully executed triple swirl with a cherry bomb at the end.
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-6">
+                <a href="#" class="card text-dark">
+                    <img src="{% static 'photos/hanyu.jpeg' %}" class="card-img-top" alt="Recommended movie poster">
+                    <div class="card-body">
+                        <h5 class="card-title">Tytuł filmu polecanego 2</h5>
+                        <p class="card-text">
+                            Kto zabił? Kto jest podejrzany?
+                            Detektyw ma niemałą zagadkę podczas przeprowadzania śledztwa!
+                        </p>
+                    </div>
+                </a>
+            </div>
+
+            <a href="#" class="btn btn-outline-dark ml-auto mr-auto my-3">Zobacz więcej</a>
+        </div>
+    </div>
+
+    <div class="tab-pane fade" id="pills-ratings" role="tabpanel" aria-labelledby="pills-ratings-tab">
+        <div class="row">
+            <div class="col-sm-6">
+                <a href="#" class="card text-dark">
+                    <img src="{% static 'photos/hanyu.jpeg' %}" class="card-img-top" alt="Recommended movie poster">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Film nr 1</h5>
+                        <p class="card-text">
+                            Tutaj pojawi się opis filmu, który według ocen zajął 1 miejsce w rankingu.
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-6">
+                <a href="#" class="card text-dark">
+                    <img src="{% static './img/dragon.jpeg' %}" class="card-img-top" alt="Recommended movie poster">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Film nr 2</h5>
+                        <p class="card-text">
+                            Tutaj pojawi się opis filmu, który według ocen zajął 2 miejsce w rankingu.
+                        </p>
+                    </div>
+                </a>
+            </div>
+
+            <a href="#" class="btn btn-outline-dark ml-auto mr-auto my-3">Zobacz więcej</a>
+        </div>
+    </div>
+
+    <div class="tab-pane fade" id="pills-favourite" role="tabpanel" aria-labelledby="pills-favourite-tab">
+        <div class="row">
+            <div class="col-sm-6">
+                <a href="#" class="card text-dark">
+                    <img src="{% static './img/dragon.jpeg' %}" class="card-img-top" alt="Recommended movie poster">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Ulubiony film użytkowników</h5>
+                        <p class="card-text">
+                            Tutaj pojawi się opis filmu, który według ocen użytkowników zajął 1 miejsce w rankingu.
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-6">
+                <a href="#" class="card text-dark">
+                    <img src="{% static './img/dragon.jpeg' %}" class="card-img-top" alt="Recommended movie poster">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Drugi ulubiony film użytkowników</h5>
+                        <p class="card-text">
+                            Tutaj pojawi się opis filmu, który według ocen użytkowników zajął 2 miejsce w rankingu.
+                        </p>
+                    </div>
+                </a>
+            </div>
+
+            <a href="#" class="btn btn-outline-dark ml-auto mr-auto my-3">Zobacz więcej</a>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="pills-favourite" role="tabpanel" aria-labelledby="pills-favourite-tab">
+        <div class="row">
+            <div class="col-sm-6">
+                <a href="#" class="card text-dark">
+                    <img src="{% static './img/dragon.jpeg' %}" class="card-img-top" alt="Recommended movie poster">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Ulubiony film użytkowników</h5>
+                        <p class="card-text">
+                            Tutaj pojawi się opis filmu, który według ocen użytkowników zajął 1 miejsce w rankingu.
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-6">
+                <a href="#" class="card text-dark">
+                    <img src="{% static './img/dragon.jpeg' %}" class="card-img-top" alt="Recommended movie poster">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Drugi ulubiony film użytkowników</h5>
+                        <p class="card-text">
+                            Tutaj pojawi się opis filmu, który według ocen użytkowników zajął 2 miejsce w rankingu.
+                        </p>
+                    </div>
+                </a>
+            </div>
+
+            <a href="#" class="btn btn-outline-dark ml-auto mr-auto my-3">Zobacz więcej</a>
+        </div>
+    </div>
+</div>
+<

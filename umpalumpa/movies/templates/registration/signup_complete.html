@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{%load static%}
+
+{% block body_class %}login-form{% endblock %}
+
+{% block content %}
+    <p>welcome!</p>
+    <form method="post" > {% csrf_token %}
+        {{form}}
+
+        <hr>
+
+        <a href="{% url 'login' %}" class="btn btn-success">
+            sign in
+        </a>
+    </form>
+{% endblock %}

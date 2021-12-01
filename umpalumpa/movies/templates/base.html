@@ -1,0 +1,76 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <!-- Metadata -->
+        <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+            integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+        <!-- Links -->
+        <link rel="stylesheet" href="{% static 'styles.css' %}">
+
+        <!-- Title -->
+        <title>goodies</title>
+    </head>
+<body class="{% block body_class %}{% endblock %}">
+    {% block header %}
+    <div class="bg-pink pb-3 zawartosc">
+	    <div class="container">
+	    	<nav class="navbar navbar-expand-lg bg-pink">
+			<a href="{% url 'main' %}" 
+			class="navbar-brand"
+			style="color: #f0adc5">
+			Goodies</a>
+			<button class="navbar-toggler navbar-dark " type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+		        <span class="navbar-toggler-icon"></span>
+		    </button>
+		   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<form class="search-form input-group mr-4">
+			  		<input 
+			  		class="form-control" 
+			  		type="search" 
+			  		placeholder="which late-night snack for a bookie like you?">
+			  		<button class="btn btn-light input-group-append btn-sm">
+			  		let's go!
+				    	</button>
+				</form>
+				
+				<div class="navbar-nav">
+					<a class="nav-item nav-link active border rounded border-light my-3 my-lg-0 pl-3 p-lg-2 asda"
+				       href="{% url 'list_films' %}">
+						films</a>
+					<a class="nav-item nav-link active border rounded border-light my-3 my-lg-0 pl-3 p-lg-2 ml-lg-4 asda" 
+					style="padding-left: 1;"
+				       href="{% url 'profile' %}">
+					   {{ request.user }}'s kingdom</a>
+				    <a class="nav-item nav-link active border rounded border-light my-3 my-lg-0 pl-3 p-lg-2 ml-lg-4 asda "
+				    style="padding-left: 1;" 
+				    	href="{% url 'login' %}">
+						log in, honey</a>
+	    		</div>
+	    	</div>
+	    	</nav>
+	    </div>
+	</div> 
+
+    {% endblock %}
+    {% block content %}
+        this will only show untill said otherwise
+    {% endblock %}
+
+    {% block footer %}
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>	
+        <div id="page-container">
+        <footer>
+        <div class=" asda text-center footer" >All rights reserved © 2023</div>
+        </footer>
+    {% endblock %}
+</body>
+</html>
