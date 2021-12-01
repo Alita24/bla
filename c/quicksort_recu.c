@@ -36,12 +36,12 @@ void print_arr(int a[], int n)
         printf("%d,",a[l]);
     printf("]\n"); 
 }
-int iteration(int a[],int i,int j, int p, int n1,int s, int n)
+int iteration(int a[],int i, int p, int n1) //ip - the previous pivot position
 {
-    s=0;
+    int j=i-1,s=0,n=7;
+    int ip=i-1;
     printf("j:%d i:%d p:%d a[p]:%d n1:%d n:%d \n",j,i,p,a[p],n1,n);
-    
-    while(s<n1-1)
+    while(s<n1-1) //n1 amount of elements in a given section
     {
         printf("i:%d j:%d p:%d\n",i,j,p);
         if(compare(a,j,p)==1)
@@ -50,7 +50,7 @@ int iteration(int a[],int i,int j, int p, int n1,int s, int n)
             change(a,j,i);
         }
         j--;
-        print_arr(a,9);   
+        print_arr(a,7);   
         
         s++;
     }
@@ -62,34 +62,32 @@ int iteration(int a[],int i,int j, int p, int n1,int s, int n)
         i--;
         insert(a,i,p);
         printf("%d\n",i);
-        print_arr(a,9); 
+        print_arr(a,7); 
     }
     printf("j:%d i:%d p:%d a[p]:%d n1:%d\n",j,i,p,a[p],n1);
     printf("______________________\n");
-    if ((p-j)==0)
+    if ((p-j)==0 && p!=i)
     {
         //left side
-        printf("$$$$$$$$$$$$ LEFT p:%d $$$$$$$$$$$$$$$\n",p);
-        iteration(a,i,i-1,0,i,0,n);
+        printf("$$$$$$$$$$$$ LEFT i:%d $$$$$$$$$$$$$$$\n",i);
+        iteration(a,i,0,i);
         //right side
-        printf("$$$$$$$$$$$$ RIGHT p:%d $$$$$$$$$$$$$$$\n",p);
+        printf("$$$$$$$$$$$$ RIGHT i:%d $$$$$$$$$$$$$$$\n",i);
         if(p!=n1)
-            iteration(a,9,8,i+2,n-(i+1),0,n); //the 7 and the 6 are nonmutable for this set of data. if you change the complete number of elements, these values will change accordingly i=n; j=n-1
+            iteration(a,i,p+1,n-(i+1)); //the 7 and the 6 are nonmutable for this set of data. if you change the complete number of elements, these values will change accordingly i=n; j=n-1]<- this is so not true
     }
     return a;  
 }
 int main()
 {
-    int a[9]={20,15,3,8,6,0,13,4,18};
-    int n=9;
-    int p=0;
-    int i=n,j=n-1;
-    int l,s;
+    int a[7]={11,4,2,1,17,13,6};
+    int n=7,p=0;
+    int i=n,s;
     print_arr(a,n);
     printf("..................\n");
+    iteration(a,i,p,n);
     printf("THE ENDING ARRAY: ");
-    iteration(a,i,j,p,n,s,n);
-    print_arr(a,9);
+    print_arr(a,7);
     return 0 ;
     
 
